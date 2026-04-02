@@ -10,12 +10,17 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About | Clinical Architect</title>
+        <title>關於白國 | Clinical Architect</title>
         <meta name="description" content="Company history and mission for Clinical Architect." />
       </Helmet>
       
-      <div className="bg-surface py-24 sm:py-32">
-        This is About Page
+      <div className="bg-surface py-24 sm:py-32 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl font-display font-bold text-primary mb-8">關於白國</h1>
+          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
+            我們致力於醫療科技的創新與發展，為未來的醫療建構更完善的基石。
+          </p>
+        </div>
       </div>
     </>
   );
