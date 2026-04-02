@@ -39,13 +39,13 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Home | Clinical Architect</title>
+        <title>首頁 | 白國科技股份有限公司</title>
         <meta name="description" content="Precision Medical Editorial - Architecting the future of healthcare software." />
       </Helmet>
       
       <Hero />
       
-      <section className="bg-surface-container-low py-32" aria-labelledby="services-heading">
+      <section className="bg-surface-container-low py-16 lg:py-32" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-20 text-left">
             <h2 id="services-heading" className="text-4xl font-display font-bold text-on-surface">
@@ -64,17 +64,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-surface py-32" aria-labelledby="testimonials-heading">
+      <section className="bg-surface py-16 lg:py-32" aria-labelledby="testimonials-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-surface-container-highest p-16 rounded-br-[80px] shadow-ambient relative">
+          <div className="bg-surface-container-highest p-8 sm:p-16 rounded-br-[40px] sm:rounded-br-[80px] shadow-ambient relative">
             <div className="absolute top-0 right-0 p-8 text-primary/20">
-              <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-16 h-16 sm:w-24 sm:h-24" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
             </div>
             <h2 id="testimonials-heading" className="sr-only">Testimonials</h2>
             <blockquote className="relative z-10 max-w-3xl">
-              <p className="text-2xl font-display font-medium text-on-surface leading-normal">
+              <p className="text-xl sm:text-2xl font-display font-medium text-on-surface leading-normal">
                 "Clinical Architect fundamentally changed how our laboratories process genetic sequencing data. The precision of their UI reduced data-entry errors by 99%."
               </p>
               <footer className="mt-8 flex items-center">
