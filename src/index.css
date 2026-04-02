@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f9f9f9;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-highest: #e2e2e2;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-primary: #4d6700;
+  --color-primary-container: #a3cf2d;
+  --color-primary-fixed-dim: #a9d634;
+  
+  --color-secondary-container: #dce7c8;
+  
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #424940;
+  
+  --color-outline-variant: #c3c8bc;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-display: 'Manrope', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --box-shadow-ambient: 0 20px 40px rgba(26, 28, 28, 0.06);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .bg-glass {
+    background-color: rgba(249, 249, 249, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .bg-primary-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+  }
+}
