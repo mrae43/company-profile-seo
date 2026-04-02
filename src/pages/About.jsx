@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import aiStationImg from '../assets/productm.png';
 
 export default function About() {
   const milestones = [
@@ -50,14 +51,22 @@ export default function About() {
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="lg:w-2/3">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="inline-flex px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] uppercase bg-primary/10 text-primary rounded-full"
+              >
+                關於白國 | ABOUT
+              </motion.div>
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
+                transition={{ delay: 0.2 }}
                 className="text-display-lg font-display font-bold leading-none mb-10 tracking-tight"
               >
-                關於白國 <br />
-                <span className="text-primary">引領醫療精密自動化</span>
+                白國科技 <br />
+                <span className="text-on-surface-variant/60 font-light">引領醫療精密自動化</span>
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0 }}
@@ -81,9 +90,9 @@ export default function About() {
                   whileHover={{ y: -5 }}
                   className="bg-surface-container-lowest p-10 rounded-2xl shadow-ambient border border-white/40 transition-all duration-300"
                 >
-                  <p className="text-[10px] font-bold text-primary tracking-widest uppercase mb-4 opacity-70">
+                  <div className="inline-flex px-3 py-1 mb-4 text-[10px] font-bold tracking-widest uppercase bg-primary/10 text-primary rounded-full">
                     {pillar.subtitle}
-                  </p>
+                  </div>
                   <h3 className="text-2xl font-display font-bold mb-4">{pillar.title}</h3>
                   <p className="text-on-surface-variant leading-relaxed text-sm">
                     {pillar.description}
@@ -97,9 +106,14 @@ export default function About() {
         {/* Visual Timeline: Progress Through Precision */}
         <section className="py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row items-baseline gap-12 mb-20">
-              <h2 className="text-headline-lg font-display font-bold whitespace-nowrap">關鍵里程碑</h2>
-              <div className="h-px bg-outline-variant flex-grow opacity-30"></div>
+            <div className="flex flex-col mb-20 space-y-4">
+              <div className="inline-flex self-start px-4 py-1.5 text-xs font-bold tracking-[0.2em] uppercase bg-primary/10 text-primary rounded-full">
+                MILESTONES | 發展里程碑
+              </div>
+              <div className="flex flex-col md:flex-row items-baseline gap-12">
+                <h2 className="text-headline-lg font-display font-bold whitespace-nowrap">關鍵里程碑</h2>
+                <div className="h-px bg-outline-variant flex-grow opacity-30"></div>
+              </div>
             </div>
 
             <div className="space-y-24 relative">
@@ -156,6 +170,116 @@ export default function About() {
                 <div className="px-6 py-3 border border-white/20 rounded-full font-bold text-sm tracking-wide">
                   SERVICING TOP HOSPITALS
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* AI Solution Roadmap: The Evolution of Precision */}
+        <section className="py-32 bg-surface-container-low overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              {/* Text Content: Editorial Alignment */}
+              <div className="lg:w-1/2">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="inline-flex px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] uppercase bg-primary/10 text-primary rounded-full">
+                    ROADMAP | 發展計畫
+                  </div>
+                  <h2 className="text-display-md font-display font-bold leading-tight mb-8">
+                    AI 藥品辨識設備發展：<br />
+                    <span className="text-on-surface-variant/60 font-light">從精確到智慧的演進</span>
+                  </h2>
+                  <p className="text-on-surface-variant leading-relaxed mb-12 max-w-lg">
+                    自 2020 年起，我們專注於解決藥局工作流程中最具風險的環節。透過 AI 視覺識別技術，從高風險藥品出發，逐步建構全方位的藥品自動化檢核生態。
+                  </p>
+                </motion.div>
+
+                {/* Vertical Staggered Phases */}
+                <div className="space-y-6">
+                  {[
+                    {
+                      phase: '第一階段 2020',
+                      title: '安全核心：高風險辨識',
+                      description: '研發藥品辨識/取樣設備硬體。支援 30 種最易出錯且危及病患健康之關鍵藥品，並成功導入醫學中心藥局。',
+                      status: 'COMPLETED',
+                      completed: true
+                    },
+                    {
+                      phase: '第二階段',
+                      title: '全種類裸錠支援',
+                      description: '擴展 AI 學習資料庫，支援辨識所有裸錠、膠囊等錠劑種類藥品，實現全品項自動化準備。',
+                    },
+                    {
+                      phase: '第三階段',
+                      title: '複雜包裝辨識',
+                      description: '技術跨越：支援辨識所有針劑、盒裝、瓶罐裝等各類包裝形式藥品。',
+                    },
+                    {
+                      phase: '第四階段',
+                      title: '智慧統計分析',
+                      description: '進階量化計算：支援統計藥袋內藥品數量計算，強化最終檢核的精確性。',
+                    }
+                  ].map((item, idx) => (
+                    <motion.div
+                      key={item.phase}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.1 }}
+                      className={`p-8 rounded-2xl border border-white/40 transition-all duration-300 ${
+                        item.completed 
+                          ? 'bg-surface-container-lowest shadow-ambient border-primary/20' 
+                          : 'bg-surface-container-low opacity-60'
+                      }`}
+                    >
+                      <div className="flex items-start justify-between mb-4">
+                        <span className={`text-[10px] font-bold tracking-widest uppercase ${item.completed ? 'text-primary' : 'text-on-surface-variant'}`}>
+                          {item.phase}
+                        </span>
+                        {item.completed && (
+                          <span className="bg-primary/10 text-primary text-[9px] px-2 py-0.5 rounded-full font-bold">
+                            ✓ 已完成導入
+                          </span>
+                        )}
+                      </div>
+                      <h4 className="text-xl font-display font-bold mb-2">{item.title}</h4>
+                      <p className="text-sm text-on-surface-variant leading-relaxed">
+                        {item.description}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Visual Anchor: Product Render */}
+              <div className="lg:w-1/2 relative">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                  whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="relative z-10"
+                >
+                  <div className="absolute inset-0 bg-primary/5 blur-[120px] rounded-full transform -translate-y-12"></div>
+                  <img 
+                    src={aiStationImg} 
+                    alt="AI Medication Station" 
+                    className="relative z-20 w-full h-auto drop-shadow-2xl rounded-[2rem]"
+                  />
+                  
+                  {/* Floating Metric Card for Editorial Detail */}
+                  <motion.div
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute -bottom-8 -left-8 bg-surface-container-lowest/80 backdrop-blur-xl p-6 rounded-2xl shadow-ambient border border-white/40 z-30 hidden sm:block"
+                  >
+                    <p className="text-[10px] font-bold text-primary tracking-widest uppercase mb-1">Precision Rating</p>
+                    <p className="text-3xl font-display font-bold">99.98%</p>
+                    <p className="text-[10px] text-on-surface-variant mt-2 font-medium">Verified by Medical Centers</p>
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
           </div>
