@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
+import ProductShowcase from '../components/ProductShowcase';
 import ServiceCard from '../components/ui/ServiceCard';
 
 export default function Home() {
@@ -54,6 +55,8 @@ export default function Home() {
       </Helmet>
       
       <Hero />
+
+      <ProductShowcase />
       
       <section className="bg-surface-container-low py-16 lg:py-32" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
