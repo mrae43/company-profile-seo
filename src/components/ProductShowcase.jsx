@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import ProductX from '../assets/productx.png';
 import ProductY from '../assets/producty.png';
 import ProductZ from '../assets/productz.png';
+import ProductM from '../assets/productm.png';
 
 export default function ProductShowcase() {
   const products = [
@@ -70,16 +71,54 @@ export default function ProductShowcase() {
             取藥更精準方便
           </h2>
         </div>
-        <div className="mt-20 flex justify-end">
-          <Link 
-            to="/products" 
-            className="group flex items-center gap-3 px-8 py-3 rounded-full border border-outline-variant text-on-surface-variant text-sm font-bold tracking-widest uppercase hover:bg-surface-container-highest hover:border-primary-container transition-all duration-300"
-          >
-            <span>More</span>
-            <div className="w-8 h-[1px] bg-outline-variant group-hover:bg-primary-container group-hover:w-12 transition-all duration-300" />
-            <span className="text-lg leading-none transition-transform group-hover:translate-x-1">→</span>
-          </Link>
+        {/* AI Identification Product Row */}
+        <div className="mt-20 relative bg-white overflow-hidden rounded-br-[80px] shadow-sm border border-outline-variant/10">
+          <div className="flex flex-col lg:flex-row min-h-[400px]">
+            {/* Left Part: Product Image */}
+            <div className="lg:w-1/2 flex items-center justify-center p-12 lg:p-20 relative z-10 transition-transform duration-700 hover:scale-[1.02]">
+              <img 
+                src={ProductM} 
+                alt="MEDAOI AI Identification System" 
+                className="max-h-[350px] w-auto object-contain drop-shadow-2xl"
+              />
+            </div>
+
+            {/* Right Part: Stylized Branding & Text */}
+            <div className="lg:w-1/2 bg-surface-container-low p-12 lg:p-20 lg:pl-32 flex flex-col justify-center relative">
+              <div className="space-y-8">
+                <div className="text-3xl md:text-5xl font-display font-light text-on-surface flex items-center gap-2 flex-wrap whitespace-nowrap">
+                  <span className="flex items-center tracking-[0.25em]">
+                    M<span className="text-[#3b82f6]">E</span>D<span className="text-[#3b82f6]">A</span>O<span className="text-[#3b82f6]">I</span>
+                  </span>
+                  <span className="text-2xl md:text-3xl font-medium tracking-normal text-on-surface-variant">藥物辨識</span>
+                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-display font-medium text-on-surface mt-4 tracking-wider leading-relaxed">
+                  AI 辨識 <span className="text-[#3b82f6]">「藥」</span>無一失
+                </h3>
+                
+                {/* Lorem Ipsum padding as requested by user instruction */}
+                <div className="max-w-md">
+                  <p className="text-on-surface-variant/80 font-sans leading-relaxed text-lg">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Precision in identification, excellence in care.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-20 flex justify-end">
+                <Link 
+                  to="/products" 
+                  className="group flex items-center gap-3 px-8 py-3 rounded-full border border-outline-variant text-on-surface-variant text-sm font-bold tracking-widest uppercase hover:bg-surface-container-highest hover:border-primary-container transition-all duration-300"
+                >
+                  <span>More</span>
+                  <div className="w-8 h-[1px] bg-outline-variant group-hover:bg-primary-container group-hover:w-12 transition-all duration-300" />
+                  <span className="text-lg leading-none transition-transform group-hover:translate-x-1">→</span>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Global Section More Button (removed to match reference image preference for internal "More") */}
       </div>
     </section>
   );
