@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="text-2xl font-display font-bold text-primary">
-              Clinical Architect
+              白國科技股份有限公司
             </Link>
           </div>
 
