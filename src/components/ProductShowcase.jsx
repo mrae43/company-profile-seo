@@ -117,8 +117,6 @@ export default function ProductShowcase() {
             </div>
           </div>
         </div>
-
-        {/* Global Section More Button (removed to match reference image preference for internal "More") */}
       </div>
     </section>
   );
