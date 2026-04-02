@@ -21,6 +21,23 @@
   --font-display: 'Manrope', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
   --box-shadow-ambient: 0 20px 40px rgba(26, 28, 28, 0.06);
+
+  /* Fluid Typography */
+  --text-display-lg: 2.25rem;
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+
+  --text-headline-lg: 1.5rem;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-lg--letter-spacing: -0.01em;
+
+  --text-body-md: 0.875rem;
+  --text-body-md--line-height: 1.5;
+
+  @media (min-width: 1024px) {
+    --text-display-lg: 3.5rem;
+    --text-headline-lg: 2rem;
+  }
 }
 
 @layer base {
