@@ -1,8 +1,8 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import RootLayout from '../components/layout/RootLayout';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import News from '../pages/News';
+import Milestones from '../pages/Milestones';
 import Products from '../pages/Products';
 import Cooperation from '../pages/Cooperation';
 import Contact from '../pages/Contact';
@@ -21,8 +21,12 @@ export const router = createBrowserRouter([
         element: <About />,
       },
       {
+        path: 'milestones',
+        element: <Milestones />,
+      },
+      {
         path: 'news',
-        element: <News />,
+        element: <Navigate to="/milestones" replace />,
       },
       {
         path: 'products',
