@@ -33,10 +33,14 @@
 
   --text-body-md: 0.875rem;
   --text-body-md--line-height: 1.5;
+}
 
+@layer base {
   @media (min-width: 1024px) {
-    --text-display-lg: 3.5rem;
-    --text-headline-lg: 2rem;
+    :root {
+      --text-display-lg: 3.5rem;
+      --text-headline-lg: 2rem;
+    }
   }
 }
 

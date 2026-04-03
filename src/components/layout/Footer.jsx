@@ -4,9 +4,8 @@ export default function Footer() {
   const navItems = [
     { name: '首頁', path: '/' },
     { name: '關於白國', path: '/about' },
-    { name: '最新消息', path: '/news' },
+    { name: '發展里程碑', path: '/milestones' },
     { name: '產品介紹', path: '/products' },
-    { name: '廠商合作', path: '/cooperation' },
   ];
 
   const contactInfo = {
