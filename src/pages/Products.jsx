@@ -3,9 +3,12 @@ import { Helmet } from 'react-helmet-async';
 import imgBaiguo from '../assets/baiguo4_18.png';
 import imgProductm from '../assets/productm.png';
 import imgProducty from '../assets/producty.png';
+import imgProductA from '../assets/productA.png';
+import imgProductB from '../assets/productB.png';
+import imgProductC from '../assets/productC.png';
 
 export default function Products() {
-  const [activeStorageTab, setActiveStorageTab] = useState('high-capacity');
+  const [activeStorageTab, setActiveStorageTab] = useState('modular-boxes');
   const [openSpecs, setOpenSpecs] = useState({ storage: false, ai: false });
 
   const toggleSpecs = (section) => {
@@ -176,13 +179,13 @@ export default function Products() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="mb-16">
                <span className="inline-block px-3 py-1 bg-secondary-container text-on-surface text-xs font-semibold rounded-sm mb-6 uppercase tracking-wider">Product Line A</span>
-               <h2 className="text-4xl lg:text-5xl font-display font-bold text-on-surface mb-6">Smart Modular Storage</h2>
-               <p className="text-xl text-on-surface-variant max-w-3xl">Highly configurable, RFID-tracked pharmacy cabinets designed to scale with your facility's pharmaceutical volume.</p>
+               <h2 className="text-4xl lg:text-5xl font-display font-bold text-on-surface mb-6">ADC智能藥櫃</h2>
+               <p className="text-xl text-on-surface-variant max-w-3xl">Intelligently engineered automated dispensing cabinets featuring modular medicine boxes, dynamic light guidance, and precise electronic weighing to eliminate errors and streamline clinical workflows.</p>
             </div>
 
-            {/* Scalability Switcher */}
+            {/* Feature Switcher */}
             <div className="flex space-x-2 mb-8 overflow-x-auto pb-4 no-scrollbar">
-              {['high-capacity', 'precision', 'compact'].map((tab) => (
+              {['modular-boxes', 'light-guidance', 'electronic-weighing'].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveStorageTab(tab)}
@@ -192,22 +195,30 @@ export default function Products() {
                       : 'bg-surface-container-low text-on-surface-variant hover:bg-surface-container-highest'
                   }`}
                 >
-                  {tab === 'high-capacity' ? 'High Capacity (16-Pouch)' : tab === 'precision' ? 'Precision (6-Drawer)' : 'Compact (5-Drawer)'}
+                  {tab === 'modular-boxes' ? 'Modular Boxes' : tab === 'light-guidance' ? 'Light Guidance' : 'Electronic Weighing'}
                 </button>
               ))}
             </div>
 
-            <div className="bg-surface-container-low rounded-3xl p-8 lg:p-16 mb-8 flex flex-col block items-center justify-center min-h-[500px]">
-                {/* Visual Placeholder mapping to activeTab */}
-                <div className="text-center text-on-surface-variant">
-                   <svg className="w-20 h-20 mx-auto mb-6 opacity-40 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-                   </svg>
-                   <div className="text-xl font-display mb-2">
-                     [ {activeStorageTab === 'high-capacity' ? '16-Pouch System' : activeStorageTab === 'precision' ? '6-Drawer System' : '5-Drawer System'} Image Placeholder ]
+            <div className="bg-surface-container-low rounded-3xl p-8 lg:p-16 mb-8 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24 min-h-[500px]">
+                {/* Image on the left */}
+                <div className="w-full lg:w-1/2">
+                   <div className="bg-surface-container-lowest/50 backdrop-blur-md p-6 rounded-2xl shadow-[0_20px_40px_rgba(26,28,28,0.06)] border border-outline-variant/10">
+                     <img 
+                       src={activeStorageTab === 'modular-boxes' ? imgProductA : activeStorageTab === 'light-guidance' ? imgProductB : imgProductC}
+                       alt={activeStorageTab}
+                       className="w-full mix-blend-multiply dark:mix-blend-normal h-auto max-h-[350px] object-contain drop-shadow-xl"
+                     />
                    </div>
-                   <p className="max-w-md mx-auto opacity-70">
-                     {activeStorageTab === 'high-capacity' ? 'Ideal for high-volume bulk supply environments.' : activeStorageTab === 'precision' ? 'Optimized for mixed-unit fast dispensing.' : 'Space-conscious design for localized wards.'}
+                </div>
+
+                {/* Text on the right */}
+                <div className="w-full lg:w-1/2 text-left text-on-surface-variant">
+                   <div className="text-3xl font-display font-medium mb-4 text-on-surface">
+                     {activeStorageTab === 'modular-boxes' ? 'Modular Medicine Boxes (模組化藥盒)' : activeStorageTab === 'light-guidance' ? 'Light Guidance (燈光導引)' : 'Electronic Weighing (電子秤重)'}
+                   </div>
+                   <p className="text-lg opacity-80 leading-relaxed max-w-lg">
+                     {activeStorageTab === 'modular-boxes' ? '藥盒尺寸可任選，內抽隔間可調整。' : activeStorageTab === 'light-guidance' ? '調劑人員可通過燈光指引藥品的位置。' : '調劑人員可通過軟體功能同步監測商品的重量計數。'}
                    </p>
                 </div>
             </div>
