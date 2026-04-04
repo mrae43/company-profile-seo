@@ -37,20 +37,27 @@ export default function Products() {
                 <p className="font-sans text-lg lg:text-xl text-on-surface-variant max-w-xl leading-relaxed">
                   The Complete Pharmacy Automation Ecosystem. We integrate AI-driven identification with intelligent modular storage to completely error-proof clinical workflow.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
                   <a 
                     href="#storage" 
                     onClick={(e) => smoothScroll(e, 'storage')}
                     className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-gradient-to-br from-primary to-primary-container text-white font-medium shadow-[0_20px_40px_rgba(77,103,0,0.2)] hover:-translate-y-1 transition-transform duration-300"
                   >
-                    Explore Smart Storage
+                    ADC智能藥櫃
+                  </a>
+                  <a 
+                    href="#dispensing" 
+                    onClick={(e) => smoothScroll(e, 'dispensing')}
+                    className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-surface-container-highest text-on-surface font-medium hover:bg-surface-container-lowest transition-colors duration-300"
+                  >
+                    智能調劑台
                   </a>
                   <a 
                     href="#ai" 
                     onClick={(e) => smoothScroll(e, 'ai')}
                     className="inline-flex justify-center items-center px-8 py-4 rounded-full bg-surface-container-highest text-on-surface font-medium hover:bg-surface-container-lowest transition-colors duration-300"
                   >
-                    Explore AI Identification
+                    MEDAOI
                   </a>
                 </div>
               </div>
