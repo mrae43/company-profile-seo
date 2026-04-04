@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import imgBaiguo from '../assets/baiguo4_18.png';
+import imgProductm from '../assets/productm.png';
+import imgProducty from '../assets/producty.png';
 
 export default function Products() {
   const [activeStorageTab, setActiveStorageTab] = useState('high-capacity');
@@ -62,15 +65,31 @@ export default function Products() {
                 </div>
               </div>
               <div className="relative z-0">
-                {/* Ecosystem Placeholder Visual */}
-                <div className="w-full aspect-square lg:aspect-[4/3] rounded-2xl bg-surface-container-highest/80 backdrop-blur-2xl flex items-center justify-center p-8 relative overflow-hidden shadow-[0_40px_80px_rgba(26,28,28,0.08)]">
-                  <div className="absolute inset-x-0 top-1/2 h-1/2 bg-gradient-to-t from-surface-container-low to-transparent opacity-50 z-0"></div>
-                  <div className="text-center text-on-surface-variant font-medium z-10">
-                    <svg className="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                    [ Ecosystem Composite Image Placeholder ]<br/>
-                    <span className="text-sm">MEDAO Scanner + Smart Cabinets</span>
+                {/* The Angular Tech Split Visual */}
+                <div className="w-full aspect-square lg:aspect-[4/3] rounded-2xl bg-surface backdrop-blur-2xl flex relative overflow-hidden shadow-[0_40px_80px_rgba(26,28,28,0.08)] border border-outline-variant/10">
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-surface-container-low to-transparent opacity-80 z-0 pointer-events-none"></div>
+                  
+                  {/* Three equal vertical sections with a sharp divider */}
+                  <div className="flex w-full h-full divide-x divide-primary/30 relative z-10 mix-blend-multiply dark:mix-blend-normal">
+                    
+                    {/* Slot 1 `*/}
+                    <div className="flex-1 relative group overflow-hidden bg-surface-container hover:bg-surface-container-lowest transition-colors duration-500 flex items-center justify-center p-2 sm:p-4">
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <img src={imgProducty} alt="Smart Cabinet" className="w-full h-[80%] object-contain drop-shadow-xl transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700" />
+                    </div>
+                    
+                    {/* Slot 2 */}
+                    <div className="flex-1 relative group overflow-hidden bg-surface-container hover:bg-surface-container-lowest transition-colors duration-500 flex items-center justify-center p-2 sm:p-4">
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <img src={imgBaiguo} alt="智能調劑台" className="w-full h-[80%] object-contain drop-shadow-xl transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700" />
+                    </div>
+
+                    {/* Slot 3 */}
+                    <div className="flex-1 relative group overflow-hidden bg-surface-container hover:bg-surface-container-lowest transition-colors duration-500 flex items-center justify-center p-2 sm:p-4">
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <img src={imgProductm} alt="MEDAO Scanner" className="w-full h-[80%] object-contain drop-shadow-xl transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700" />
+                    </div>
+                    
                   </div>
                 </div>
               </div>
