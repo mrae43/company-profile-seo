@@ -216,19 +216,8 @@ export default function Milestones() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {products.map((product) => (
-                <div key={product.name} className="flex flex-col items-center">
-                  <div className="aspect-[4/5] bg-surface-container-low rounded-3xl overflow-hidden mb-8 w-full">
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
-                      className="w-full h-full object-contain p-8 mix-blend-multiply"
-                    />
-                  </div>
-                  <h3 className="text-lg font-display font-bold">{product.name}</h3>
-                </div>
-              ))}
+            <div className="">
+              <img src="/src/assets/baiguo7_11.jpg" alt="live-showcase" />
             </div>
             
             <div className="mt-24 p-12 bg-primary-container/10 rounded-[40px] text-center border border-primary/10">
