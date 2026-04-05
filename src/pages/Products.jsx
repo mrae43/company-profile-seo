@@ -260,11 +260,96 @@ export default function Products() {
           </div>
         </section>
 
-        {/* 4. Category B: AI Identification (MEDAO) */}
+        {/* Category B: Light Guidance (燈光導引) */}
+        <section id="light-guidance" className="py-32 bg-surface-container-low scroll-mt-24">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              
+              {/* Content Side */}
+              <div className="order-2 lg:order-1 space-y-12">
+                <div>
+                  <span className="inline-block px-3 py-1 bg-secondary-container text-on-surface text-xs font-semibold rounded-sm mb-6 uppercase tracking-wider">Product Line B</span>
+                  <h2 className="text-4xl lg:text-6xl font-display font-bold text-on-surface mb-4 leading-tight">燈光導引 & <span className="text-primary">電子標籤</span></h2>
+                  <p className="text-xl text-on-surface-variant font-sans tracking-tight">Smart Dispensing & Electronic Labeling System</p>
+                </div>
+
+                <div className="space-y-8">
+                  {/* Feature 1: Light Guidance */}
+                  <div className="group p-8 rounded-2xl bg-surface-container-lowest hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(26,28,28,0.02)] border border-outline-variant/10">
+                    <div className="flex items-start gap-6">
+                      <div className="h-12 w-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-display font-semibold text-on-surface mb-2">燈光導引 | Light Guidance</h3>
+                        <p className="text-on-surface-variant leading-relaxed">
+                          可設計成多種顏色的燈光，讓每個調劑人員可藉著燈光，指引到自己藥品的位置。
+                          <span className="block mt-1 text-sm opacity-60 italic">Configurable multi-colored lights guide each staff member directly to their specific medication location.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Feature 2: Electronic Medicine Box */}
+                  <div className="group p-8 rounded-2xl bg-surface-container-lowest hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(26,28,28,0.02)] border border-outline-variant/10">
+                    <div className="flex items-start gap-6">
+                      <div className="h-12 w-12 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 11h.01M7 15h.01M13 7h.01M13 11h.01M13 15h.01M17 7h.01M17 11h.01M17 15h.01M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-display font-semibold text-on-surface mb-2">電子藥盒 | Electronic Bins</h3>
+                        <p className="text-on-surface-variant leading-relaxed">
+                          每個藥盒加入電子標籤，將藥品品名、庫存數量、條碼、燈光或色塊一併呈現在面板前。
+                          <span className="block mt-1 text-sm opacity-60 italic">Each bin is equipped with electronic labels displaying drug names, inventory levels, and status indicators in real-time.</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-4">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-surface text-sm rounded-full">
+                    <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Pick-to-Light Technology
+                  </div>
+                </div>
+              </div>
+
+              {/* Visual Side */}
+              <div className="order-1 lg:order-2 relative">
+                <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full transform -translate-x-12"></div>
+                <div className="relative bg-surface-container-lowest p-6 sm:p-12 rounded-[2rem] shadow-[0_40px_80px_rgba(26,28,28,0.08)] border border-outline-variant/10 overflow-hidden transform lg:rotate-1 hover:rotate-0 transition-transform duration-700 group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full"></div>
+                  <img src={imgBaiguo} alt="Light Guidance Hardware" className="w-full h-auto object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-105 transition-transform duration-700" />
+                  
+                  {/* Floating Metric Overlay */}
+                  <div className="absolute bottom-8 left-8 right-8 bg-surface/80 backdrop-blur-md p-4 rounded-xl border border-outline-variant/20 shadow-sm flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-xs font-semibold text-on-surface font-sans">99.9% Dispensing Accuracy</span>
+                    </div>
+                    <span className="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest">Medical Grade</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* 4. Category C: AI Identification (MEDAO) */}
         <section id="ai" className="py-32 bg-surface-container-low scroll-mt-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="mb-16">
-               <span className="inline-block px-3 py-1 bg-secondary-container text-on-surface text-xs font-semibold rounded-sm mb-6 uppercase tracking-wider">Product Line B</span>
+               <span className="inline-block px-3 py-1 bg-secondary-container text-on-surface text-xs font-semibold rounded-sm mb-6 uppercase tracking-wider">Product Line C</span>
                <h2 className="text-4xl lg:text-5xl font-display font-bold text-on-surface mb-16">MEDAO Verification</h2>
             </div>
             
