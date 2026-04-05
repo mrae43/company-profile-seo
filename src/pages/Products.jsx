@@ -302,6 +302,116 @@ export default function Products() {
                </div>
             </div>
 
+            {/* Clinical Integration Workflow */}
+            <div className="mt-24 mb-16 px-4">
+              <div className="text-center mb-16">
+                 <h3 className="text-2xl lg:text-3xl font-display font-medium text-on-surface mb-2">Clinical Integration Workflow</h3>
+                 <p className="text-on-surface-variant font-sans text-sm tracking-widest uppercase mb-8">導入AI藥物辨識儀器之調劑流程</p>
+              </div>
+
+              <div className="relative max-w-5xl mx-auto">
+                {/* Desktop Workflow (Horizontal) */}
+                <div className="hidden lg:block relative h-[240px]">
+                  {/* SVG Connectors */}
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" fill="none">
+                    {/* Main Line */}
+                    <path d="M 80 160 H 920" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4" className="text-outline-variant/30" />
+                    
+                    {/* Automation Branch Curve */}
+                    <path d="M 230 140 C 230 80, 580 80, 580 140" stroke="currentColor" strokeWidth="2" className="text-primary-container" />
+                    
+                    {/* Arrows */}
+                    <path d="M 135 160 L 145 160" stroke="currentColor" strokeWidth="2" className="text-primary-fixed-dim" />
+                    <path d="M 310 160 L 320 160" stroke="currentColor" strokeWidth="2" className="text-primary-fixed-dim" />
+                    <path d="M 485 160 L 495 160" stroke="currentColor" strokeWidth="2" className="text-primary-fixed-dim" />
+                    <path d="M 660 160 L 670 160" stroke="currentColor" strokeWidth="2" className="text-primary-fixed-dim" />
+                    <path d="M 835 160 L 845 160" stroke="currentColor" strokeWidth="2" className="text-primary-fixed-dim" />
+                  </svg>
+
+                  {/* Steps */}
+                  <div className="absolute inset-0 flex items-center justify-between px-0">
+                    {/* 01. Prescription */}
+                    <div className="flex flex-col items-center w-[160px] translate-y-10">
+                      <div className="px-6 py-3 bg-surface-container-highest text-on-surface rounded-full text-sm font-medium border border-outline-variant/10 shadow-sm whitespace-nowrap">
+                        醫師處方 <span className="opacity-60 ml-1">Prescription</span>
+                      </div>
+                    </div>
+
+                    {/* 02. Review */}
+                    <div className="flex flex-col items-center w-[160px] translate-y-10 relative">
+                      <div className="px-6 py-3 bg-surface-container-highest text-on-surface rounded-full text-sm font-medium border border-outline-variant/10 shadow-sm whitespace-nowrap">
+                        藥師審核 <span className="opacity-60 ml-1">Review</span>
+                      </div>
+                      {/* Branch Label */}
+                      <div className="absolute -top-24 left-1/2 -translate-x-1/2 px-4 py-2 bg-secondary-container text-primary text-[10px] font-bold rounded-full uppercase tracking-tighter whitespace-nowrap">
+                        自動包藥配方 <span className="opacity-70 ml-1">Automated Packaging</span>
+                      </div>
+                    </div>
+
+                    {/* 03. Dispensing */}
+                    <div className="flex flex-col items-center w-[160px] translate-y-10">
+                      <div className="px-6 py-3 bg-surface-container-highest text-on-surface rounded-full text-sm font-medium border border-outline-variant/10 shadow-sm whitespace-nowrap">
+                        藥師調劑 <span className="opacity-60 ml-1">Dispensing</span>
+                      </div>
+                    </div>
+
+                    {/* 04. Integration */}
+                    <div className="flex flex-col items-center w-[160px] translate-y-10">
+                      <div className="px-6 py-3 bg-surface-container-highest text-on-surface rounded-full text-sm font-medium border border-outline-variant/10 shadow-sm whitespace-nowrap">
+                        藥物整合 <span className="opacity-60 ml-1">Integration</span>
+                      </div>
+                    </div>
+
+                    {/* 05. AI Verification - HIGHLIGHTED */}
+                    <div className="flex flex-col items-center w-[160px] translate-y-10 transform scale-110 z-10 transition-transform hover:scale-115">
+                      <div className="px-6 py-3 bg-primary-gradient text-white rounded-full text-sm font-semibold shadow-[0_10px_30px_rgba(77,103,0,0.3)] ring-4 ring-surface-container-low whitespace-nowrap">
+                        儀器覆核 <span className="opacity-80 ml-1 text-xs">AI Scan</span>
+                      </div>
+                    </div>
+
+                    {/* 06. Issuance */}
+                    <div className="flex flex-col items-center w-[160px] translate-y-10">
+                      <div className="px-6 py-3 bg-surface-container-highest text-on-surface rounded-full text-sm font-medium border border-outline-variant/10 shadow-sm whitespace-nowrap">
+                        發藥 <span className="opacity-60 ml-1">Issuance</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mobile Workflow (Vertical) */}
+                <div className="lg:hidden flex flex-col space-y-10 items-center">
+                   {[
+                     { label: "醫師處方", en: "Prescription" },
+                     { label: "藥師審核", en: "Review", branch: true },
+                     { label: "藥師調劑", en: "Dispensing" },
+                     { label: "藥物整合", en: "Integration" },
+                     { label: "儀器覆核", en: "AI Verification", highlight: true },
+                     { label: "發藥", en: "Issuance" }
+                   ].map((step, idx, arr) => (
+                     <div key={idx} className="flex flex-col items-center relative w-full max-w-[280px]">
+                        {idx < arr.length - 1 && (
+                          <div className="absolute top-12 bottom-[-40px] w-px bg-outline-variant/30 left-1/2 -translate-x-1/2 z-0 border-r border-dashed border-outline-variant/20"></div>
+                        )}
+                        
+                        {step.branch && (
+                           <div className="absolute -top-6 right-0 translate-x-1/2 px-3 py-1 bg-secondary-container text-primary text-[8px] font-bold rounded-full uppercase tracking-tighter">
+                             Automated Packaging
+                           </div>
+                        )}
+
+                        <div className={`
+                          px-8 py-3 rounded-full text-sm font-medium shadow-sm relative z-10 w-full text-center
+                          ${step.highlight ? 'bg-primary-gradient text-white scale-105 shadow-md' : 'bg-surface-container-highest text-on-surface border border-outline-variant/10'}
+                        `}>
+                          {step.label} <span className={`ml-2 text-xs ${step.highlight ? 'opacity-80' : 'opacity-60'}`}>{step.en}</span>
+                        </div>
+                     </div>
+                   ))}
+                </div>
+              </div>
+            </div>
+
+
             {/* Contextual Specs Accordion */}
             <div>
                <button 
