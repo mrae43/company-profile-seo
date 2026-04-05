@@ -286,8 +286,8 @@ export default function Products() {
                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                        </svg>
                      </div>
-                     <h3 className="text-2xl font-display font-medium text-on-surface">AI-Driven Safety</h3>
-                     <p className="text-on-surface-variant leading-relaxed">Pill morphology analysis prevents wrong-drug/wrong-dose errors with 99.99% operational accuracy prior to dispensation.</p>
+                     <h3 className="text-2xl font-display font-medium text-on-surface">Rapid AI Verification</h3>
+                     <p className="text-on-surface-variant leading-relaxed">Achieve high-precision results with ~1 second identification per medicine bag, significantly reducing dispensing errors through advanced AI morphology analysis.</p>
                   </div>
 
                   <div className="flex flex-col space-y-4">
@@ -296,8 +296,8 @@ export default function Products() {
                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
                      </div>
-                     <h3 className="text-2xl font-display font-medium text-on-surface">Automatic Log Entry</h3>
-                     <p className="text-on-surface-variant leading-relaxed">Replaces manual inventory tracking. Every dispensed unit is digitally photographed, timestamped, and stored in the localized cloud architecture.</p>
+                     <h3 className="text-2xl font-display font-medium text-on-surface">Operational Efficiency</h3>
+                     <p className="text-on-surface-variant leading-relaxed">Supports both standalone and networked operations to minimize human resource requirements and address clinical pharmacist shortages through automated digital logging.</p>
                   </div>
                </div>
             </div>
