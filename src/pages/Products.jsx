@@ -272,15 +272,9 @@ export default function Products() {
               {/* Feature to benefit: image side */}
                <div className="aspect-square bg-surface-container-lowest rounded-3xl flex items-center justify-center p-12 shadow-[0_30px_60px_rgba(26,28,28,0.05)]">
                   <div className="text-center text-on-surface-variant">
-                     <svg className="w-24 h-24 mx-auto mb-6 opacity-40 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                     </svg>
                      <div className="text-xl font-display mb-2">
-                       [ MEDAO AI Hardware Placeholder ]
+                       <img src={imgProductm} alt="MEDAO Verification" className="w-full h-auto max-h-[350px] object-contain drop-shadow-xl" />
                      </div>
-                     <p className="max-w-xs mx-auto text-sm opacity-70">
-                       Top-down high-resolution imaging structure.
-                     </p>
                   </div>
                </div>
 
