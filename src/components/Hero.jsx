@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import productA from '../assets/productA.png';
-import productB from '../assets/productB.png';
-import productC from '../assets/productC.png';
+import hero from '../assets/hero.jpg';
 
 const ICON_PLAY = (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -64,21 +62,21 @@ export default function Hero() {
               {/* Product A: Background layer */}
               <div className="absolute top-0 right-0 w-[60%] animate-float-slow opacity-40 blur-[2px] lg:blur-0 lg:opacity-100">
                 <div className="aspect-[3/4] bg-surface-container-highest rounded-3xl sm:rounded-[40px] shadow-2xl overflow-hidden p-6 sm:p-10 flex items-center justify-center">
-                  <img src={productA} alt="5-Drawer Modular Unit" className="w-full h-auto object-contain drop-shadow-2xl" />
+                  <img src={hero} alt="5-Drawer Modular Unit" className="w-full h-auto object-contain drop-shadow-2xl" />
                 </div>
               </div>
 
               {/* Product B: Mid layer */}
               <div className="absolute top-1/4 left-0 w-[65%] z-20 animate-float">
                 <div className="aspect-[3/4] bg-surface rounded-3xl sm:rounded-[40px] shadow-ambient overflow-hidden p-6 sm:p-10 flex items-center justify-center border border-primary/5">
-                  <img src={productB} alt="6-Drawer Smart Storage" className="w-full h-auto object-contain drop-shadow-2xl" />
+                  <img src={hero} alt="6-Drawer Smart Storage" className="w-full h-auto object-contain drop-shadow-2xl" />
                 </div>
               </div>
 
               {/* Product C: Foreground focus layer */}
               <div className="absolute -bottom-8 right-[5%] w-[55%] z-30 animate-float-delayed">
                 <div className="aspect-[3/4] bg-white rounded-3xl sm:rounded-[40px] shadow-2xl overflow-hidden p-6 sm:p-10 flex items-center justify-center">
-                  <img src={productC} alt="16-Pouch High Capacity" className="w-full h-auto object-contain drop-shadow-2xl" />
+                  <img src={hero} alt="16-Pouch High Capacity" className="w-full h-auto object-contain drop-shadow-2xl" />
                 </div>
               </div>
 
