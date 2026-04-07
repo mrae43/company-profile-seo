@@ -1,19 +1,32 @@
-# Modern Corporate Profile & SEO-Optimized Landing Page
+# Clinical Architect: AI-Powered Smart Pharmacy & Medical Storage Solutions
 
-This project is a high-performance modernization of a traditional static HTML company profile into a dynamic, SEO-optimized landing page. It serves as a comprehensive digital landmark, balancing modern design aesthetics with technical excellence to deliver a premium user experience and improved search visibility.
+[**LIVE DEMO**](https://company-profile-seo.vercel.app/)
 
-## 🚀 Key Features
+A premium, high-performance web platform for a leading medical technology partner. This project transforms traditional corporate communication into a high-conversion, solution-oriented digital experience, balancing medical precision with cutting-edge tech aesthetics.
 
-- **SEO Optimized**: Fully integrated with `react-helmet-async` for dynamic meta tags, titles, and descriptions across all pages.
-- **Fluid UI Animations**: Powered by `framer-motion` for smooth layout transitions, interactive hover states, and dynamic navigation.
-- **Modern Tech Stack**: Built with **React 19**, **Vite**, and **Tailwind CSS 4** for lightning-fast development and production performance.
-- **Responsive & Accessible**: Mobile-first design with a focus on WCAG 2.1 compliance and semantic HTML5.
-- **Bespoke Aesthetics**: Built with a modern, high-tech design system featuring:
-    - **Typography**: Professional-grade `Manrope` for display and `Inter` for body text.
-    - **Visual Depth**: Custom `box-shadow-ambient` and glassmorphic headers for a premium feel.
-    - **Harmonious Palette**: Sophisticated color schemes and high-contrast surfaces optimized for readability.
+---
 
-## 🛠️ Technology Stack
+## 🏥 The Strategic Mission
+
+Moving beyond a generic "tech startup" aesthetic, this platform embodies **"The Clinical Architect"** philosophy. Every pixel is designed to project credibility and authoritative validation for hospital administrators and industry clients.
+
+- **High-End Editorial Experience**: A design that balances human-centric care with laboratory-grade accuracy.
+- **Validation-First**: Strategic shift from "News" to "Milestones," highlighting clinical success stories like the **Hualien Armed Forces General Hospital** integration.
+- **The Ecosystem Model**: Presenting hardware (Smart Modular Storage) and software (AI Identification) as a single, unified workflow.
+
+---
+
+## 🚀 Key Features & Domain Expertise
+
+- **AI-Powered Verification**: Visualizing the instantaneous 1-second-per-bag medication check system.
+- **Smart LED Light Guidance**: Interactive representation of "Pick-to-Light" technology that eliminates picking errors.
+- **Modular Storage Visualization**: Showcasing scalable cabinet systems (5, 6, 8, and 16-grid) through a dynamic "Overlapping Modular Trio" hero layout.
+- **Clinical Validation & Milestones**: Documenting a track record of innovation dating back to 2012.
+- **SEO Optimized Architecture**: Built with `react-helmet-async` for high search visibility in the medical automation sector.
+
+---
+
+## 🛠️ Modern Tech Stack
 
 | Feature | Technology |
 | :--- | :--- |
@@ -23,51 +36,59 @@ This project is a high-performance modernization of a traditional static HTML co
 | **Animations** | [Framer Motion](https://www.framer.com/motion/) |
 | **SEO** | [React Helmet Async](https://github.com/staylor/react-helmet-async) |
 | **Routing** | [React Router 7](https://reactrouter.com/) |
-| **Linting** | [ESLint & Prettier](https://eslint.org/) |
+| **Deployment** | [Vercel](https://vercel.com/) |
+
+---
+
+## 🎨 "The Clinical Architect" Design System
+
+Our signature design system, detailed in `DESIGN.md`, follows strict rules to achieve a premium medical feel:
+
+- **The "No-Line" Rule**: Structural boundaries defined by background color shifts (tonal layering) rather than solid borders.
+- **Intentional Asymmetry**: Breaking traditional grids to create curated, editorial focal points.
+- **Glassmorphism & Gradients**: Using 70% opacity backgrounds with 24px backdrop blur and "Signature Lime" gradients for depth.
+- **Typography Scale**: High-tech `Manrope` for display (headlines) paired with highly legible `Inter` for technical body content.
+
+---
 
 ## 📂 Project Structure
 
 ```text
 src/
-├── assets/             # Images, icons, and global SVG assets
-├── components/         # Reusable UI components
-│   ├── layout/         # Layout components (Navbar, Footer, RootLayout)
-│   └── ui/             # Atomic UI elements (ServiceCard, Buttons)
-├── pages/              # Main page routes (Home, About, News, Contact)
-├── routes/             # App routing configuration
-└── index.css           # Global styles and Tailwind 4 theme configuration
+├── components/
+│   ├── layout/         # Glassmorphic Navbar, Footer, and RootLayout
+│   ├── ui/             # Atomic elements with tonal depth (Buttons, Cards)
+│   ├── Hero.jsx        # Modular trio cabinet visualization
+│   └── ProductShowcase.jsx # Integrated workflow bridge
+├── pages/
+│   ├── Home.jsx        # Value proposition and high-level ecosystem overview
+│   ├── Products.jsx    # Technical specifications and modular scalability
+│   ├── About.jsx       # Company heritage and core philosophy
+│   ├── Milestones.jsx  # Clinical validation and development roadmap
+│   └── Contact.jsx     # Modern intake with geolocation maps
+├── routes/             # SPA routing with React Router 7
+└── index.css           # Tailwind 4 theme & "The Clinical Architect" tokens
 ```
+
+---
+
+## 📅 AI Development Roadmap
+
+We are currently tracking through 4 phases of AI evolution:
+1. **Phase 1 (Completed):** High-risk medication identification for 30 categories.
+2. **Phase 2:** Full support for bare tablets and capsules.
+3. **Phase 3:** Expansion to injections, boxed, and bottled medications.
+4. **Phase 4:** Advanced statistical calculation of quantity within sealed bags.
+
+---
 
 ## 🏁 Getting Started
 
-### Prerequisites
+1. **Install dependencies**: `npm install`
+2. **Start development**: `npm run dev`
+3. **Build for production**: `npm run build`
 
-- Node.js (Latest LTS version recommended)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd company-profile
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Build for production:
-   ```bash
-   npm run build
-   ```
+---
 
 ## 📄 License
-
-This project is private and proprietary. All rights reserved.
+Privately held and proprietary software. Built by **Medical Tech Solutions Team**.
