@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 // Media Assets
-import imgBaiguo from '../assets/baiguo4_18.png';
-import imgProductm from '../assets/productm.png';
-import imgProducty from '../assets/producty.png';
-import imgProductA from '../assets/productA.png';
-import imgProductB from '../assets/productB.png';
-import imgProductC from '../assets/productC.png';
+import imgBaiguo from '../assets/baiguo4_18.webp';
+import imgProductm from '../assets/productm.webp';
+import imgProducty from '../assets/producty.webp';
+import imgProductA from '../assets/productA.webp';
+import imgProductB from '../assets/productB.webp';
+import imgProductC from '../assets/productC.webp';
 
 // --- Icons (Abstracted to prevent "AI Slop") ---
 
