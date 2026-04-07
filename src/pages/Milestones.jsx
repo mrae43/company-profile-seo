@@ -320,6 +320,7 @@ export default function Milestones() {
                     src="https://img.youtube.com/vi/vW-oUKojTFM/maxresdefault.jpg" 
                     alt="Clinical Validation Video"
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                    loading='lazy'
                   />
                   <div className="absolute inset-0 bg-primary/20 mix-blend-multiply opacity-0 group-hover:opacity-40 transition-opacity" />
                   <div className="absolute inset-0 flex items-center justify-center">

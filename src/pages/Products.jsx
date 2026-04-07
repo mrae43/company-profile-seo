@@ -117,7 +117,7 @@ export default function Products() {
                   <div className="flex h-full divide-x divide-outline-variant/10 relative z-10">
                     {[imgProducty, imgBaiguo, imgProductm].map((img, i) => (
                       <div key={i} className="flex-1 flex items-center justify-center p-6 hover:bg-surface-container-low transition-colors duration-500">
-                        <img src={img} alt="" className="w-full h-auto object-contain drop-shadow-xl transform group-hover:scale-105 transition-transform duration-700" />
+                        <img src={img} alt="" className="w-full h-auto object-contain drop-shadow-xl transform group-hover:scale-105 transition-transform duration-700" loading='lazy' />
                       </div>
                     ))}
                   </div>
@@ -202,6 +202,7 @@ export default function Products() {
                     src={currentTab.image} 
                     alt={currentTab.label} 
                     className="w-full h-full object-contain mix-blend-multiply dark:mix-blend-normal transform transition-all duration-700 group-hover:scale-105"
+                    loading='lazy'
                   />
                   {/* Aspect Indicator */}
                   <div className="absolute bottom-8 left-8 flex items-center gap-3 bg-surface/90 backdrop-blur-md px-4 py-2 rounded-full border border-outline-variant/15 shadow-sm text-[10px] font-bold uppercase tracking-widest text-on-surface">
@@ -280,7 +281,7 @@ export default function Products() {
                 <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full opacity-30 -z-10 scale-125"></div>
                 <div className="relative bg-surface-container-lowest p-8 lg:p-16 rounded-[4rem] shadow-ambient border border-outline-variant/10 overflow-hidden transform lg:-rotate-2 hover:rotate-0 transition-transform duration-1000">
                   <div className="absolute top-0 right-0 w-48 h-48 bg-primary/5 rounded-bl-[100px]"></div>
-                  <img src={imgProductm} alt="MEDAO AI Scanner" className="w-full h-auto object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-105 transition-transform duration-1000" />
+                  <img src={imgProductm} alt="MEDAO AI Scanner" className="w-full h-auto object-contain drop-shadow-2xl mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-105 transition-transform duration-1000" loading='lazy' />
                   
                   {/* Live Metric Overlay */}
                   <div className="absolute bottom-12 inset-x-8 px-8 py-6 bg-surface/80 backdrop-blur-xl rounded-3xl border border-outline-variant/20 shadow-ambient flex items-center justify-between">

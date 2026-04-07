@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import aiStationImg from '../assets/productm.png';
+import aiStationImg from '../assets/productm.webp';
 
 // Icons extracted as constants to reduce JSX clutter (Avoiding AI Slop)
 const ICON_PRINT = (
@@ -246,6 +246,7 @@ export default function About() {
                     src={aiStationImg} 
                     alt="AI Precision Hardware" 
                     className="w-full h-auto rounded-[2rem] drop-shadow-2xl grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                    loading='lazy'
                   />
                   <div className="absolute -top-12 -right-12 w-48 h-48 bg-surface p-8 rounded-full shadow-ambient flex flex-col justify-center items-center text-center">
                     <span className="text-4xl font-display font-bold text-primary tracking-tighter underline underline-offset-4 decoration-primary/30">99.9%</span>

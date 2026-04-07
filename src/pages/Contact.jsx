@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import kaohsiungMap from '../assets/kaohsiung_map.png';
-import taipeiMap from '../assets/taipei_map.png';
+import kaohsiungMap from '../assets/kaohsiung_map.webp';
+import taipeiMap from '../assets/taipei_map.webp';
 
 const CONTACT_CATEGORIES = [
   { value: '產品咨詢', label: '產品咨詢' },
@@ -294,6 +294,7 @@ export default function Contact() {
                               src={office.map} 
                               alt={`${office.title} Location Map`}
                               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                              loading='lazy'
                             />
                             <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500"></div>
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
