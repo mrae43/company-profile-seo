@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import kaohsiungMap from '../assets/kaohsiung_map.png';
-import taipeiMap from '../assets/taipei_map.png';
+import kaohsiungMap from '../assets/kaohsiung_map.webp';
+import taipeiMap from '../assets/taipei_map.webp';
 
 const CONTACT_CATEGORIES = [
   { value: '產品咨詢', label: '產品咨詢' },

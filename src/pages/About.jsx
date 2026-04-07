@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import aiStationImg from '../assets/productm.png';
+import aiStationImg from '../assets/productm.webp';
 
 // Icons extracted as constants to reduce JSX clutter (Avoiding AI Slop)
 const ICON_PRINT = (

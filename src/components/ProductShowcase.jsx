@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import ProductX from '../assets/productx.png';
-import ProductY from '../assets/producty.png';
-import ProductZ from '../assets/productz.png';
-import ProductM from '../assets/productm.png';
+import ProductX from '../assets/productx.webp';
+import ProductY from '../assets/producty.webp';
+import ProductZ from '../assets/productz.webp';
+import ProductM from '../assets/productm.webp';
 
 const modularProducts = [
   { id: 'X', name: '六格櫃', img: ProductX },

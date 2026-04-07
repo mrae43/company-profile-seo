@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import hero from '../assets/hero.jpg';
+import hero from '../assets/hero.webp';
 
 const ICON_PLAY = (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
