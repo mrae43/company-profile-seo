@@ -15,6 +15,21 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none'; // Prevent touch scrolling on some mobile browsers
+    } else {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+      document.body.style.touchAction = 'unset';
+    };
+  }, [isOpen]);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navItems = [
@@ -120,10 +135,34 @@ export default function Navbar() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="fixed inset-0 z-40 md:hidden bg-surface flex flex-col pt-32 px-10"
+            transition={{ type: 'spring', damping: 35, stiffness: 300 }}
+            className="fixed inset-0 z-[60] md:hidden bg-surface flex flex-col overflow-y-auto"
           >
-            <div className="flex flex-col space-y-10">
+            {/* Mobile Header (replicated for smooth transition) */}
+            <div className="flex justify-between items-center h-28 px-6 sm:px-10 border-b border-outline-variant/10">
+              <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-4">
+                <div className="relative w-10 h-10 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-primary-gradient rounded-xl transform rotate-45" />
+                  <span className="relative z-10 text-white font-display font-bold text-lg">B</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xl font-display font-bold text-on-surface leading-none tracking-tight">白國科技</span>
+                  <span className="text-[10px] font-sans font-semibold uppercase tracking-[0.25em] text-primary leading-tight mt-1">Precision Medical</span>
+                </div>
+              </Link>
+              
+              <button 
+                onClick={() => setIsOpen(false)}
+                className="p-3 text-on-surface hover:text-primary transition-colors bg-surface-container-low rounded-full"
+                aria-label="Close menu"
+              >
+                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="flex flex-col space-y-8 pt-12 px-10 pb-20">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -158,22 +197,14 @@ export default function Navbar() {
                 >
                   聯繫我們
                 </Link>
-                <div className="mt-16 space-y-3">
-                  <p className="text-sm font-sans uppercase tracking-[0.3em] font-bold text-primary">白國科技</p>
-                  <p className="text-base font-sans text-on-surface-variant leading-relaxed">Precision Medical Logistics & AI Robotics Partner</p>
+                <div className="mt-16 space-y-4 pt-10">
+                  <p className="text-xs font-sans uppercase tracking-[0.4em] font-black text-primary">Precision Logistics</p>
+                  <p className="text-sm font-sans text-on-surface-variant leading-relaxed max-w-[280px]">
+                    Global Strategic Partner for Pharmaceutical Automation & AI Robotics
+                  </p>
                 </div>
               </motion.div>
             </div>
-            
-            {/* Close button inside drawer */}
-            <button 
-              onClick={() => setIsOpen(false)}
-              className="absolute top-10 right-10 p-2 text-on-surface-variant hover:text-primary transition-colors"
-            >
-              <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
           </motion.div>
         )}
       </AnimatePresence>
